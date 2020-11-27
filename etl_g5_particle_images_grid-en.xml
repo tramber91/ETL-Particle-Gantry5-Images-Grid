@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" client="site" version="3.7">
+    <name>ETL particle G5 Images grid</name>
+    <version>2.1</version>
+    <creationDate>24.11.2020</creationDate>
+    <author>Bertrand Pascal - En Toutes Lettres</author>
+    <authorEmail>webmaster@en-toutes-lettres.fr</authorEmail>
+    <authorUrl>https://www.en-toutes-lettres.fr</authorUrl>
+    <copyright>© 2020 En Toutes Lettres</copyright>
+    <license>MIT - see LICENSE.pdf</license>
+    <packager>En Toutes Lettres</packager>
+    <packagerurl>https://www.en-toutes-lettres.fr</packagerurl>
+    <description>
+        <![CDATA[<h3>Particle "Image Grid" for Gantry 5 v2.1 - Template Hydrogen (English version)</h3>
+		<h4>By En Toutes Lettres (https://www.en-toutes-lettres.fr)</h4>
+		<h4>Don't forget to add these 2 lines</h4>
+        <h3><span style="color:#0000FF">@import 'dependencies';</span></h3>
+        <h3><span style="color:#0000FF">@import 'etl_images_grid'; </span></h3>
+		<h4>in your custom CSS file, custom.scss (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>
+        <h4>or create this file and add these 2 lines with your text editor (/templates/g5_hydrogen/custom/scss/custom.scss)</h4>]]>
+    </description>
+    <fileset>
+        <files folder="particles" target="templates/g5_hydrogen/custom/particles"><filename>etl_images_grid.html.twig</filename><filename>etl_images_grid.yaml</filename></files>
+		<files folder="scss" target="templates/g5_hydrogen/custom/scss"><filename>etl_images_grid.scss</filename></files>
+    </fileset>
+	<updateservers>
+		<server type="extension" priority="2" name="ETL particle G5 Images grid Update Site">https://raw.githubusercontent.com/tramber91/ETL-Particle-Gantry5-Images-Grid/master/updates.xml</server>
+	</updateservers>
+</extension>
+	
