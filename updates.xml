@@ -5,7 +5,7 @@
         <description></description>
         <element>etl_g5_particle_images_grid</element>
         <type>file</type>
-        <version>2.2</version>
+        <version>v2.2</version>
         <client>site</client>
         <infourl title="etl_g5_particle_images_grid"></infourl>
         <downloads>
@@ -23,7 +23,7 @@
         <description></description>
         <element>etl_g5_particle_images_grid</element>
         <type>file</type>
-        <version>2.1</version>
+        <version>v2.1</version>
         <client>site</client>
         <infourl title="etl_g5_particle_images_grid"></infourl>
         <downloads>
