@@ -30,6 +30,12 @@ or create this file and add these 2 lines with your text editor (/templates/g5_h
 All notable changes to this project.
 
 
+## [2.1] - 2017-11-01
+
+### Added
+- Joomla! Update System
+
+
 ## [2.0] - 2017-11-01
 
 ### Added
