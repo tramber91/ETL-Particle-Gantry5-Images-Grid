@@ -1,5 +1,3 @@
-# WARNING in test phase
-
 ![Image](https://www.demo-gantry5.en-toutes-lettres.fr/images/demo/etl_particles_image_grid.jpg)
 
 # Images grid particle for [Gantry] 5 Framework. 
