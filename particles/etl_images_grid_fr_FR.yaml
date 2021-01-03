@@ -1,0 +1,171 @@
+name: ETL Grille images (FR)
+description: Construction d'une grille d'images (popup RokBox/Lightcase ou Lien externe)
+type: particle
+icon: fa-picture-o
+
+configuration:
+  caching:
+    type: static
+
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Publier
+      description: Publier la particule.
+      default: true
+
+    titel:
+      type: separator.note
+      class: settings-param
+      content: '<div style="color: #5fa0c0"><h4>Particule Grille images (FR)</h4></div><div class="float-left"><img src="https://www.en-toutes-lettres.fr/images/etl/etl_gantry5_particles.png" alt="En toutes lettres - gantry particles"></div><div class="settings-param-field">&nbsp;&nbsp;&nbsp;<a href="http://www.demo-gantry5.en-toutes-lettres.fr/particles-fr/grille-images-fr" target="_blank">Info et  démo&nbsp;<i class="fa fa-fw fa-external-link"></i></a></div>'
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class de la particule.
+
+    style:
+      type: select.selectize
+      label: Style de la particule
+      description: Sélectionnez votre style pré-défini de particules.
+      default:  etl-bloc-image-style-1
+      options:
+        etl-bloc-image-style-1: Style 1 (opacité)
+        etl-bloc-image-style-2: Style 2 (zoom)
+        etl-bloc-image-style-3: Style 3 (polaroid-zoom)
+        etl-bloc-image-style-4: Style 4 (opacité legende centré)
+
+    popuplink:
+      type: select.selectize
+      label: Extension
+      description: Selectionner l'extension Popup (RokBox ou Lightcase).
+      default:  popup-lc
+      options:
+        popup-lc: Lightcase
+        popup-rb: RokBox
+
+    etlradius:
+      type: select.selectize
+      label: Image Border Radius
+      description: Sélectionner border radius (arrondi) de vos images .
+      default:  etlradius-0
+      options:
+        etlradius-0: Border radius none
+        etlradius-8: Border radius 8px
+        etlradius-12: Border radius 12px
+
+    etlpadding:
+      type: select.selectize
+      label: Image padding
+      description: Sélectionner padding (Espace autour de vos images).
+      default:  etlpadding-40
+      options:
+        etlpadding-00: Padding none
+        etlpadding-05: Padding 0.5px (Style 4)
+        etlpadding-40: Padding 4px
+        etlpadding-80: Padding 8px
+ 
+    title:
+      type: input.text
+      label: Titre
+      description: Définir le titre du bloc.
+      placeholder: Votre titre ...
+
+    titleclass:
+      type: input.selectize
+      label: Titre CSS Classes
+      description: Vous pouvez définir des classe CSS spécifiques pour votre titre.
+
+    desc:
+      type: textarea.textarea
+      label: Description
+      description: Définir la description du bloc.
+      placeholder: Une description courte ...
+
+    cols:
+      type: select.select
+      label: Grille
+      description: Définir le nombre de colonnes de votre grille d'images
+      placeholder: 'Sélectionner...'
+      default: etl-imagegrid-2cols
+      options:
+        etl-imagegrid-2cols: 2 colonnes
+        etl-imagegrid-3cols: 3 colonnes
+        etl-imagegrid-4cols: 4 colonnes
+        etl-imagegrid-5cols: 5 colonnes
+
+    album:
+      type: input.text
+      label: Nom de l'Album
+      description: Définir le nom de votre album d'images (doit être unique).
+      placeholder: Entrer le nom de l'album (unique)
+ 
+    showcaption:
+      type: input.checkbox
+      label: Légende
+      description: Publiez une légende sous l'image (à l'intérieur pour Style 4).
+      default: false
+ 
+    footer:
+      type: textarea.textarea
+      label: Texte sous la grille
+      description: Si besoin, texte sous la grille.
+      placeholder: Une description courte
+
+    imagegrilleelements:
+      type: collection.list
+      array: true
+      label: Images
+      description: Sélectionner chaque image qui apparaitront dans la grille.
+      value: titre
+      ajax: true
+
+      fields:
+        .titre:
+          type: input.text
+          label: Titre
+          skip: true
+        .subtitre:
+          type: input.text
+          label: Sous-Titre
+        .showimagetitle:
+          type: input.checkbox
+          label: Montrer (Sous)Titre
+          description: Montrer titre et sous-titre de l'image.
+          default: true
+        .image:
+          type: input.imagepicker
+          label: Votre image
+          description: Sélectionner votre image.
+        .legende:
+          type: input.text
+          label: Légende
+          description: Légende de votre image (vu aussi dans le popup).
+          placeholder: Entrer votre légende
+        .linkto:
+          type: select.select
+          label: Lien vers ...
+          description: Choisissez d'afficher une image ou d'ouvrir un lien personnalisé sur l'action du 'clique sur l'image'.
+          default: etl-image
+          options:
+            etl-image: Popup Image
+            etl-link: Lien
+        .popupimage:
+          type: input.imagepicker
+          label: Popup Image
+          description: Si vous souhaitez afficher une autre image dans la fenêtre 'popup', Sélectionnez la ici (Si champ laissé vide, Votre image initial sera sélectionné).
+        .link:
+          type: input.text
+          label: Lien
+          description: Spécifiez l'adresse du lien (url) quand vous cliquez sur l'image (si 'lien' est sélectionné).
+        .linktarget:
+          type: select.selectize
+          label: Cible (pour le lien)
+          description: Fenêtre cible du navigateur lorsque le lien est cliqué.
+          placeholder: 'Sélectionner...'
+          default: _self
+          options:
+            _self: Parente
+            _blank: Nouvelle fenêtre
