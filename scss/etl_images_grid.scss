@@ -271,7 +271,7 @@ $imagetitle-padding: 1.5rem;
         @include transition(all 0.35s);
         &:before {
             color: $white;
-            @include background-image(linear-gradient(top, transparentize($accent-color-1, 90%) 0%, $accent-color-1 100%));
+            @include background-image(linear-gradient(top, transparentize($accent-color-1, .9) 0, $accent-color-1 1));
             content: "";
             position: absolute;
             z-index: 1;
