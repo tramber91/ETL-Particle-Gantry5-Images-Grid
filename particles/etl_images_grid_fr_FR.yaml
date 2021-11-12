@@ -1,5 +1,5 @@
 name: ETL Grille images (FR)
-description: Construction d'une grille d'images (popup RokBox/Lightcase ou Lien externe)
+description: Construction d'une grille d'images (popup Lightcase ou Lien externe)
 type: particle
 icon: fa-picture-o
 
@@ -36,15 +36,6 @@ form:
         etl-bloc-image-style-2: Style 2 (zoom)
         etl-bloc-image-style-3: Style 3 (polaroid-zoom)
         etl-bloc-image-style-4: Style 4 (opacité legende centré)
-
-    popuplink:
-      type: select.selectize
-      label: Extension
-      description: Selectionner l'extension Popup (RokBox ou Lightcase).
-      default:  popup-lc
-      options:
-        popup-lc: Lightcase
-        popup-rb: RokBox
 
     etlradius:
       type: select.selectize
