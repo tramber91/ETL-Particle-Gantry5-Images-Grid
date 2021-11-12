@@ -13,8 +13,8 @@
     <description>
         <![CDATA[<h3>Particle "Image Grid" for Gantry 5.5 v3.0 - Template Hydrogen (English version)</h3>
         <h4>By En Toutes Lettres (https://www.en-toutes-lettres.fr)</h4>
-        <h3><span style="color:#5fa0c0">Compatible Joomla 4 - Warning: Popup lightbox only now. Rokbox no more compatible Jommla 4</span></h3>
-        <h4><span style="color:#5fa0c0">For french version, in folder "/templates/g5_hydrogen/custom/particles"<br />rename file "etl_images_grid.yaml" to "etl_images_grid_EN.yaml"<br />rename file "etl_images_grid_FR.yaml" to "etl_images_grid.yaml"</span></h4>
+        <h3><span style="color:#5fa0c0">Compatible Joomla 4! - Warning: Popup lightbox only now, popup Rokbox no more compatible Joomla 4!</span></h3>
+        <h4><span style="color:#5fa0c0">For french version, in your folder "/templates/g5_hydrogen/custom/particles"<br />rename file "etl_images_grid.yaml" to "etl_images_grid_EN.yaml"<br />rename file "etl_images_grid_FR.yaml" to "etl_images_grid.yaml"</span></h4>
         <h4>Don't forget to add these 2 lines</h4>
         <h3><span style="color:#5fa0c0">@import 'dependencies';</span></h3>
         <h3><span style="color:#5fa0c0">@import 'etl_images_grid'; </span></h3>
