@@ -27,6 +27,13 @@ or create this file and add these 2 lines with your text editor (/templates/g5_h
 # Changelog
 All notable changes to this project.
 
+## [3.0] - 2021-11-11
+
+### Corrrection - update
+- Update to Gantry 5.5 and Joomla 4
+- Review SCSS (new Compilator Gantry)
+- Remove Popup Rokbox no more compatible with Joomla 4
+
 
 ## [2.1] - 2017-11-01
 
