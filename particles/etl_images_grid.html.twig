@@ -1,6 +1,6 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 {% block particle %}
-<div class="etl-imagegrid-bloc {{ particle.class|e }} {{ particle.style }}">
+<div class="etl-imagegrid-bloc {{ particle.class|e }} {{ particle.style }}">{# comment test #}
     {% if particle.title %}<div class="etl-imagegrid-title {{ particle.titleclass|e }}"><div class="g-content"><h2>{{ particle.title|raw }}</h2></div></div>{% endif %}
     <div class="etl-imagegrid-custom {{ particle.style }} {{ particle.etlradius }} {{ particle.etlpadding }}">
         {% if particle.desc %}<div class="etl-imagegrid-desc">{{ particle.desc|raw }}</div>{% endif %}
@@ -8,28 +8,23 @@
             {% for imagegrilleelements in particle.imagegrilleelements %}
               {% if particle.style == 'etl-bloc-image-style-4' %}
                 <div class="etl-imagegrid-item etl-imagegrid-item-{{ particle.style }}">
-                     {% if particle.popuplink == 'popup-rb' %}
-                     <a class="etl-imagegrid-link-v4" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rokbox{% if particle.album %} data-rokbox-album="{{ particle.album|e }}{% endif %}" data-rokbox-caption="{{ imagegrilleelements.legende|raw }}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
-                      <img src="{{ url(imagegrilleelements.image)|e }}" alt="{{ imagegrilleelements.legende|e }}">
-                     {% else %}
                      <a class="etl-imagegrid-link-v4" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rel="lightcase{% if particle.album %}:{{ particle.album }}{% endif %}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
                      <img src="{{ url(imagegrilleelements.image)|e }}" alt="{{ imagegrilleelements.legende|e }}">
-                     {% endif %}
                      <div class="etl-inside">
                             <div>
                                 {% if particle.showcaption %}
                                     <div class="etl-imagegrid-caption-v4">
-										{% if imagegrilleelements.legende == '' %}
-										<i class="fa fa-link fa-2" aria-hidden="true"></i>
-										{% else %}
+                                        {% if imagegrilleelements.legende == '' %}
+                                        <i class="fa fa-link fa-2" aria-hidden="true"></i>
+                                        {% else %}
                                         {{ imagegrilleelements.legende|raw }}
-										{% endif %}
+                                        {% endif %}
                                     </div>
                                 {% else %}
-										{% if imagegrilleelements.linkto == 'etl-link' %}
+                                        {% if imagegrilleelements.linkto == 'etl-link' %}
                                         <i class="fa fa-link fa-3" aria-hidden="true"></i>
-										{% endif %}
-								{% endif %}
+                                        {% endif %}
+                                {% endif %}
                             </div>
                         </div>
                        {% if imagegrilleelements.showimagetitle %}
@@ -46,24 +41,8 @@
                 </div>
               {% else %}
                 <div class="etl-imagegrid-item-{{ particle.style }}{% if imagegrilleelements.linkto == 'etl-link' %} etl-link{% endif %}">
-                     {% if particle.popuplink == 'popup-rb' %}
-                     <a class="etl-imagegrid-link" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rokbox data-rokbox-album="{{ particle.album|e }}" data-rokbox-caption="{{ imagegrilleelements.legende|raw }}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
-                      <img src="{{ url(imagegrilleelements.image)|e }}" alt="{{ imagegrilleelements.legende|e }}">
-                      {% if imagegrilleelements.showimagetitle %}
-                        <span class="etl-imagegrid-item-desc">
-                          <span class="etl-imagegrid-item-desc-title">
-                            {% if imagegrilleelements.titre %}{{ imagegrilleelements.titre }}{% endif %}
-                          </span>
-                          <span class="etl-imagegrid-item-desc-subtitle">
-                            {% if imagegrilleelements.subtitre %}{{ imagegrilleelements.subtitre }}{% endif %}
-                          </span>
-                        </span>
-                      {% endif %}
-                    </a>
-                     {% else %}
                      <a class="etl-imagegrid-link" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rel="lightcase{% if particle.album %}:{{ particle.album }}{% endif %}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
                       <img src="{{ url(imagegrilleelements.image)|e }}" alt="{{ imagegrilleelements.legende|e }}">
-                    
                       {% if imagegrilleelements.showimagetitle %}
                         <span class="etl-imagegrid-item-desc">
                           <span class="etl-imagegrid-item-desc-title">
@@ -75,7 +54,6 @@
                         </span>
                       {% endif %}
                     </a>
-                     {% endif %}
                     {% if particle.showcaption %}<div class="etl-grid-caption">{{ imagegrilleelements.legende|raw }}</div>{% endif %}
                 </div>
               {% endif %}
