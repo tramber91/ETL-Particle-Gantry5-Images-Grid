@@ -1,5 +1,5 @@
 name: ETL Image Grid
-description: Built your image grid (popup RokBox/Lightcase or External link)
+description: Built your image grid (popup Lightcase or External link)
 type: particle
 icon: fa-picture-o
 
@@ -36,15 +36,6 @@ form:
         etl-bloc-image-style-2: Style 2 (zoom)
         etl-bloc-image-style-3: Style 3 (polaroid-zoom)
         etl-bloc-image-style-4: Style 4 (opacity caption inside)
-
-    popuplink:
-      type: select.selectize
-      label: Extension
-      description: Select Popup Extension.
-      default:  popup-lc
-      options:
-        popup-lc: Lightcase
-        popup-rb: RokBox
 
     etlradius:
       type: select.selectize
