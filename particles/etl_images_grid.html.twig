@@ -41,7 +41,7 @@
                 </div>
               {% else %}
                 <div class="etl-imagegrid-item-{{ particle.style }}{% if imagegrilleelements.linkto == 'etl-link' %} etl-link{% endif %}">
-                     <a class="etl-imagegrid-link" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rel="lightcase{% if particle.album %}:{{ particle.album }}{% endif %}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
+                     <a class="etl-imagegrid-link fas" {% if imagegrilleelements.linkto == 'etl-image' %}{% if imagegrilleelements.popupimage == '' %}href="{{ url(imagegrilleelements.image)|e }}"{% else %}href="{{ url(imagegrilleelements.popupimage)|e }}"{% endif %} data-rel="lightcase{% if particle.album %}:{{ particle.album }}{% endif %}"{% else %} target="{{ imagegrilleelements.linktarget|default('_self')|e }}" href="{{ url(imagegrilleelements.link)|e }}"{% endif %}>
                       <img src="{{ url(imagegrilleelements.image)|e }}" alt="{{ imagegrilleelements.legende|e }}">
                       {% if imagegrilleelements.showimagetitle %}
                         <span class="etl-imagegrid-item-desc">
