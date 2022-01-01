@@ -1,21 +1,20 @@
-<?xml version="1.0" ?>
 <updates>
     <update>
-        <name>Update ETL particle image Grid</name>
+        <name>Update ETL particle images Grid</name>
         <description></description>
         <element>etl_g5_particle_images_grid</element>
         <type>file</type>
-        <version>2.1</version>
-        <client>site</client>
+        <version>3.0</version>
+        <client>0</client>
         <infourl title="etl_g5_particle_images_grid"></infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/tramber91/ETL-Particle-Gantry5-Images-Grid/archive/2.1.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/tramber91/ETL-Particle-Gantry5-Images-Grid/releases/download/3.0/etl_g5_particle_images_grid-v3.0.zip</downloadurl>
         </downloads>
         <tags>
             <tag>stable</tag>
         </tags>
         <maintainer>En Toutes Lettres</maintainer>
         <maintainerurl>https://www.en-toutes-lettres.fr</maintainerurl>
-        <targetplatform name="joomla" version="3.(9|10)" />
+        <targetplatform name="joomla" version="[34].[0123456789]" />
     </update>
 </updates>
